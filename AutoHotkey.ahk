@@ -342,6 +342,7 @@ sc07B & Tab::Send, ^{Tab}
 ~vk1Csc079 & 9::Send, {Blind}{sc07B}{F9}{sc07B}
 ~vk1Csc079 & 0::Send, {Blind}{sc07B}{F0}{sc07B}
 ~sc079 & T::Goto, sc07B & T
+~sc079 & W::Send, {Blind}^w
 ~sc079 & H::Send, {Blind}^+{Tab}
 ~sc079 & L::Send, {Blind}^{Tab}
 
