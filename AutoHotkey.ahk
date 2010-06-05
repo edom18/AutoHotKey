@@ -110,7 +110,7 @@ return
 ;--------------------
 ;  Notepad
 ;--------------------
-; アクティブ or 起動
+; Active or Run
 vk1Csc079 & N::
 Process,Exist,notepad.exe
 If ErrorLevel<>0
@@ -119,7 +119,7 @@ else
 	Run,notepad.exe
 return
 
-;  Tabで切り替え
+;  Switch window by Tab button
 #IfWinActive ahk_class Notepad
 ^Tab::
   WinGetClass, className, A
@@ -177,7 +177,7 @@ return
 #IfWinExist
 
 ;-------------------------------
-;  ポップアップメニュー
+;  Popup menu.
 ;-------------------------------
 ;CapsLock
 ;vkF0sc03A & Space::Goto, popup 
@@ -197,7 +197,7 @@ Menu, popMenu, add, Safari &S, runSa
 Menu, popMenu, add, Opera &O, runOp
 Menu, popMenu, add, IETester &T, runIEtester
 Menu, popMenu, add, Notepad &D, runNotepad
-Menu, popMenu, add, マイドキュメント &A, runMyDoc
+Menu, popMenu, add, MyDocument &A, runMyDoc
 Menu,popMenu,show
 return
 }
@@ -239,10 +239,10 @@ else
 return
 
 ;-------------------------------
-;  無変換キーバインド
+;  key bind to 'muhenkan' button.
 ;-------------------------------
 
-;  カーソルキー
+;  cursor key.
 ~sc07B & 1::Send, {Blind}{F1}
 sc07B & 2::Send, {Blind}{F2}
 sc07B & 3::Send, {Blind}{F3}
@@ -276,7 +276,7 @@ sc07B & Q::Goto, ~vk1Csc079 & Q
 sc07B & `;::Send, ^c
 sc07B & p::Send, ^v
 
-; 最大化・戻し
+; window maximize or restore.
 sc07B & C:: MaxRest()
 MaxRest() {
 	WinGet, win, ,A
@@ -290,13 +290,13 @@ MaxRest() {
 
 
 ;-------------------------------
-;  CaspLockキーバインド
+;  CaspLock key bind
 ;-------------------------------
 ;sc03A & S::Send, {F2}{sc03A}
 
 
 ;-------------------------------
-;  window移動
+;  move window
 ;-------------------------------
 sc07B & left::
 MouseMove, -5,0,0,R
@@ -328,7 +328,7 @@ sc07B & Tab::Send, ^{Tab}
 
 
 ;-----------------------------
-;  変換キーバインド
+; key bind to 'henkan' button.
 ;-----------------------------
 ~vk1Csc079 & R::Send, {Blind}{sc07B}{F5}{sc07B}
 ~vk1Csc079 & 1::Send, {Blind}{sc07B}{F1}{sc07B}
@@ -391,7 +391,7 @@ return
 ::fens::set fenc=shift_jis
 
 ;====================
-; ハンドルのウインドウが 最大化常態かどうかを調べる
+; check active window status Maximize or not.
 ;====================
 H2IsZ(hWindow)
 {
