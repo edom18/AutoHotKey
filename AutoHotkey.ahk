@@ -254,6 +254,18 @@ sc07B & 8::Send, {Blind}{F8}
 sc07B & 9::Send, {Blind}{F9}
 sc07B & 0::Send, {Blind}{F0}
 
+; Numpad
+~sc07B & Numpad1::Send, {Blind}{F1}
+sc07B & Numpad2::Send, {Blind}{F2}
+sc07B & Numpad3::Send, {Blind}{F3}
+sc07B & Numpad4::Send, {Blind}{F4}
+sc07B & Numpad5::Send, {Blind}{F5}
+sc07B & Numpad6::Send, {Blind}{F6}
+sc07B & Numpad7::Send, {Blind}{F7}
+sc07B & Numpad8::Send, {Blind}{F8}
+sc07B & Numpad9::Send, {Blind}{F9}
+sc07B & Numpad0::Send, {Blind}{F0}
+
 sc07B & sc079::Send, {Blind}{LButton}
 
 sc07B & V::Send, {Blind}{F12}
@@ -398,3 +410,9 @@ H2IsZ(hWindow)
 {
 	Return DllCall("user32.dll\IsZoomed", "UInt", hWindow)
 }
+
+
+;====================
+; memo
+;====================
+; WinGet, var, [void], A ;get active window.
